@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="t d">
+  <title id="t">Gato de frente sobre um círculo oliva</title>
+  <desc id="d">Ilustração minimalista de um gato de frente, sobre um grande círculo verde.</desc>
+  <rect width="900" height="1100" fill="#DCD8C8"/>
+  <circle cx="450" cy="640" r="340" fill="#435035"/>
+  <rect x="0" y="960" width="900" height="140" fill="#CFC9B4"/>
+  <!-- corpo -->
+  <path d="M300 1100c-6-190 50-290 150-296 100 6 156 106 150 296z" fill="#151713"/>
+  <!-- orelhas -->
+  <path d="M316 470 290 620l132-62z" fill="#151713"/>
+  <path d="M584 470 610 620l-132-62z" fill="#151713"/>
+  <path d="M332 520l-14 66 52-24z" fill="#77786F"/>
+  <path d="M568 520l14 66-52-24z" fill="#77786F"/>
+  <!-- cabeça -->
+  <ellipse cx="450" cy="650" rx="166" ry="148" fill="#151713"/>
+  <!-- olhos -->
+  <ellipse cx="388" cy="640" rx="24" ry="18" fill="#C9D2B0"/>
+  <ellipse cx="512" cy="640" rx="24" ry="18" fill="#C9D2B0"/>
+  <ellipse cx="388" cy="640" rx="5" ry="16" fill="#151713"/>
+  <ellipse cx="512" cy="640" rx="5" ry="16" fill="#151713"/>
+  <!-- nariz e boca -->
+  <path d="M434 690h32l-16 18z" fill="#E9E4D6"/>
+  <path d="M450 708v14M450 722q-20 18-40 4M450 722q20 18 40 4" fill="none" stroke="#E9E4D6" stroke-width="5" stroke-linecap="round"/>
+  <!-- bigodes -->
+  <path d="M330 700l-120-14M330 722l-116 18M570 700l120-14M570 722l116 18" stroke="#E9E4D6" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+</svg>

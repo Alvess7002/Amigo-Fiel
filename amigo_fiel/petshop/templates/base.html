@@ -1,0 +1,40 @@
+{% load static %}<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Amigo Fiel — Pet care{% endblock %}</title>
+  <meta name="description" content="Amigo Fiel: catálogo de produtos para animais. Para quem considera o pet parte da família.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+  <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="header">
+    <a class="logo" href="{% url 'index' %}" aria-label="Amigo Fiel — página inicial">
+      <span>Amigo</span>
+      <span>Fiel.</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="{% url 'index' %}#catalogo">Catálogo</a>
+      <a href="{% url 'index' %}#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <span class="header__index" aria-hidden="true">AF / 026</span>
+  </header>
+
+  <main id="conteudo">
+    {% block conteudo %}{% endblock %}
+  </main>
+
+  <footer class="footer" id="contato">
+    <p class="footer__brand">Amigo Fiel © 2026</p>
+    <p class="footer__note">Pet shop / Catálogo acadêmico</p>
+    <a class="footer__top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+  </footer>
+</body>
+</html>

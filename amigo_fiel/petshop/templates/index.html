@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block conteudo %}
+<span id="topo"></span>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-titulo">
+  <div class="hero__meta">
+    <span>01 — Pet care</span>
+    <span>Recife / PE</span>
+  </div>
+
+  <h1 class="hero__title" id="hero-titulo">
+    <span class="line"><span>Cuidado que</span></span>
+    <span class="line"><span>vira conexão.</span></span>
+  </h1>
+
+  <figure class="hero__figure">
+    <img src="{% static 'images/pet-hero.svg' %}" width="900" height="1100"
+         alt="Ilustração de um cão preto de coleira, sentado diante de um arco verde-oliva">
+  </figure>
+
+  <a class="cta-link" href="#catalogo">
+    <span>Explorar catálogo</span><span class="cta-link__arrow" aria-hidden="true">↘</span>
+  </a>
+
+  <p class="hero__tagline">Pequenos detalhes.<br>Grandes amizades.</p>
+  <span class="hero__scroll" aria-hidden="true">Scroll ↓</span>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre reveal" id="sobre" aria-labelledby="sobre-titulo">
+  <span class="section-num">02</span>
+  <h2 class="sobre__title" id="sobre-titulo">
+    Produtos pensados para o cotidiano, com o carinho que eles merecem.
+  </h2>
+  <div class="sobre__text">
+    <p>O Amigo Fiel nasceu para quem considera o animal parte da família. Cada item do catálogo é escolhido pelo que entrega no dia a dia: alimento de qualidade, brinquedos que duram, higiene sem exagero e um canto confortável para descansar.</p>
+    <p>Sem excesso, sem pressa. Só o que faz diferença na rotina de quem cuida de verdade.</p>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section class="catalogo reveal" id="catalogo" aria-labelledby="catalogo-titulo">
+  <div class="catalogo__head">
+    <span class="section-num">03</span>
+    <h2 id="catalogo-titulo">Catálogo</h2>
+    <p class="catalogo__count">{{ produtos|length }} produtos</p>
+  </div>
+
+  <div class="table-wrap">
+    <table class="tabela">
+      <caption class="sr-only">Produtos disponíveis no Amigo Fiel</caption>
+      <thead>
+        <tr>
+          <th scope="col">Produto</th>
+          <th scope="col">Categoria</th>
+          <th scope="col" class="num">Preço</th>
+          <th scope="col" class="num">Estoque</th>
+          <th scope="col" class="acao">Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for produto in produtos %}
+        <tr>
+          <td class="produto">
+            <span class="produto__n">{{ forloop.counter|stringformat:"02d" }}</span>
+            <a class="produto__nome" href="{% url 'detalhe' produto.id %}">{{ produto.nome }}</a>
+          </td>
+          <td>{{ produto.categoria }}</td>
+          <td class="num">R$ {{ produto.preco }}</td>
+          <td class="num">{{ produto.estoque }} un.</td>
+          <td class="acao"><a class="view" href="{% url 'detalhe' produto.id %}" aria-label="Ver detalhes de {{ produto.nome }}">View ↗</a></td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5" class="vazio">Nenhum produto cadastrado. Adicione itens pelo painel em /admin/.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final reveal" aria-labelledby="final-titulo">
+  <h2 id="final-titulo">Seu melhor amigo<br>merece o melhor.</h2>
+  <button type="button" class="btn" id="btn-alert">Conheça o Amigo Fiel <span aria-hidden="true">→</span></button>
+</section>
+{% endblock %}

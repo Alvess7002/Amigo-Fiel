@@ -1,0 +1,10 @@
+[
+ {"model":"petshop.produtopet","pk":1,"fields":{"nome":"Ração Premium Cães Adultos","preco":"89.90","estoque":24,"categoria":"Alimentação"}},
+ {"model":"petshop.produtopet","pk":2,"fields":{"nome":"Ração Natural Gatos","preco":"74.90","estoque":18,"categoria":"Alimentação"}},
+ {"model":"petshop.produtopet","pk":3,"fields":{"nome":"Brinquedo Mordedor","preco":"39.90","estoque":15,"categoria":"Brinquedo"}},
+ {"model":"petshop.produtopet","pk":4,"fields":{"nome":"Bola Interativa","preco":"49.90","estoque":11,"categoria":"Brinquedo"}},
+ {"model":"petshop.produtopet","pk":5,"fields":{"nome":"Shampoo Hipoalergênico","preco":"34.90","estoque":20,"categoria":"Higiene"}},
+ {"model":"petshop.produtopet","pk":6,"fields":{"nome":"Tapete Higiênico","preco":"59.90","estoque":30,"categoria":"Higiene"}},
+ {"model":"petshop.produtopet","pk":7,"fields":{"nome":"Petisco Natural","preco":"27.90","estoque":25,"categoria":"Alimentação"}},
+ {"model":"petshop.produtopet","pk":8,"fields":{"nome":"Cama Conforto","preco":"129.90","estoque":7,"categoria":"Acessórios"}}
+]

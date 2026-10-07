@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="t d">
+  <title id="t">Cão sentado diante de um arco verde</title>
+  <desc id="d">Ilustração minimalista de um cão de frente, com coleira, sobre um arco oliva.</desc>
+  <rect width="900" height="1100" fill="#E4E0D3"/>
+  <circle cx="700" cy="210" r="74" fill="#CFC9B4"/>
+  <path d="M110 1100V520a340 340 0 0 1 680 0v580z" fill="#65734E"/>
+  <path d="M110 1100V520a340 340 0 0 1 680 0v580z" fill="none" stroke="#435035" stroke-width="2" transform="translate(28 28) scale(.94)" opacity=".5"/>
+  <!-- corpo -->
+  <path d="M290 1100c0-200 62-292 160-300 98 8 160 100 160 300z" fill="#151713"/>
+  <!-- orelhas -->
+  <path d="M322 560c-74 4-112 118-88 232 56 6 98-58 104-150z" fill="#151713"/>
+  <path d="M578 560c74 4 112 118 88 232-56 6-98-58-104-150z" fill="#151713"/>
+  <!-- cabeça -->
+  <ellipse cx="450" cy="650" rx="146" ry="162" fill="#151713"/>
+  <!-- focinho -->
+  <ellipse cx="450" cy="742" rx="80" ry="64" fill="#E9E4D6"/>
+  <ellipse cx="450" cy="705" rx="33" ry="22" fill="#151713"/>
+  <path d="M450 726v34M450 760q-26 26-50 8M450 760q26 26 50 8" fill="none" stroke="#151713" stroke-width="7" stroke-linecap="round"/>
+  <!-- olhos -->
+  <circle cx="394" cy="636" r="16" fill="#F1EEE7"/>
+  <circle cx="506" cy="636" r="16" fill="#F1EEE7"/>
+  <circle cx="397" cy="638" r="9" fill="#151713"/>
+  <circle cx="503" cy="638" r="9" fill="#151713"/>
+  <circle cx="400" cy="634" r="3" fill="#F1EEE7"/>
+  <circle cx="506" cy="634" r="3" fill="#F1EEE7"/>
+  <!-- coleira -->
+  <path d="M344 834q106 52 212 0l6 34q-112 58-224 0z" fill="#F1EEE7"/>
+  <circle cx="450" cy="912" r="20" fill="#F1EEE7" stroke="#65734E" stroke-width="6"/>
+</svg>

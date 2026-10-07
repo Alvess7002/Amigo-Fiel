@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}{{ produto.nome }} — Amigo Fiel{% endblock %}
+
+{% block conteudo %}
+<span id="topo"></span>
+<section class="detalhe" aria-labelledby="produto-nome">
+  <div class="detalhe__meta">
+    <span>Produto / {{ produto.id|stringformat:"02d" }}</span>
+    <span>Amigo Fiel / 2026</span>
+  </div>
+
+  <figure class="detalhe__figure">
+    {% with arquivo=produto.id|stringformat:"d" %}
+    <img src="{% static 'images/produtos/'|add:arquivo|add:'.jpg' %}" width="900" height="1100"
+         alt="Foto do produto {{ produto.nome }}"
+         onerror="this.onerror=null; this.src='{% static 'images/pet-detalhe.svg' %}'">
+    {% endwith %}
+  </figure>
+
+  <div class="detalhe__info">
+    <p class="detalhe__cat">{{ produto.categoria }}</p>
+    <h1 class="detalhe__nome" id="produto-nome">{{ produto.nome }}</h1>
+
+    <dl class="detalhe__dados">
+      <div>
+        <dt>Preço</dt>
+        <dd class="preco">R$ {{ produto.preco }}</dd>
+      </div>
+      <div>
+        <dt>Estoque</dt>
+        <dd>{{ produto.estoque }} un.</dd>
+      </div>
+    </dl>
+
+    <p class="detalhe__desc">Da linha {{ produto.categoria|lower }} do Amigo Fiel. Escolhido para a rotina de quem trata o animal como parte da família.</p>
+
+    <a class="voltar" href="{% url 'index' %}#catalogo"><span aria-hidden="true">←</span> <span>Voltar ao catálogo</span></a>
+  </div>
+</section>
+{% endblock %}
